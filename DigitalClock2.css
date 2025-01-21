@@ -1,0 +1,73 @@
+:root {
+    --bg-color: #0c0c0c;
+    --hour-color: rgb(255, 43, 43); /* 255 78 78 */
+    --minute-color: rgb(255, 252, 51);
+    --second-color: rgb(0, 255, 85);
+}
+
+
+body {
+    background-color: var(--bg-color);
+}
+
+.clock-header {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+
+    margin-top: 70px;
+    font-size: 3rem;
+    font-family: Helvetica;
+    color: antiquewhite;
+}
+
+.time-circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    text-align: center;
+    align-items: center;
+
+    height: 500px;
+    font-size: 15rem;
+    color: white;
+    width: 500px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.point {
+    position: absolute;
+    top: -25px; /* -25 centers it */
+    left: 50%;
+    transform: translateX(-50%); /* assists in centering by moving it 50% of its own width */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(0, 255, 85);
+    box-shadow: 0 0 10px 10px #ffffff8a
+}
+
+#hour-point {
+    background-color: var(--hour-color);
+    box-shadow: 0 0 7px 7px rgba(255, 78, 78, 0.25);
+}
+
+#minute-point {
+    background-color: var(--minute-color);
+    box-shadow: 0 0 7px 7px rgba(255, 252, 51, 0.25);
+}
+
+#second-point {
+    background-color: var(--second-color);
+    box-shadow: 0 0 7px 7px rgba(0, 255, 85, 0.25);
+}
